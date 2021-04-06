@@ -1,0 +1,739 @@
+/* defining CSS varibles */
+:root {
+  --dark-blue: #1d2540;
+  --orange: #f4a00c;
+  --green: #34942d;
+  --light-blue: #5086f0;
+  --light-gray: #f2f2f2;
+  --gray: #bac5cf;
+  --white: #fff;
+  --nav-font-size: 2vw;
+  --h1-font-size: 3vw;
+  --h2-font-size: 2.6vw;
+  --h3-font-size: 2.2vw;
+  --p-font-size: 1.8vw;
+  --font-family: "Russo One";
+  --start-of-main-content: 30px 0;
+  --icon-position-from-the-top: 65%;
+  --aside-margin-top: 40px;
+}
+
+/* GENERAL CLASSES */
+.center-text {
+  text-align: center;
+}
+
+/* styling the .container div */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  /* height: 100%; */
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.container {
+  background-color: var(--dark-blue);
+  opacity: 0.85;
+  height: 100%;
+  padding-bottom: 3vw;
+}
+
+/* STYLING THE NAVIGATION BAR */
+.navbar {
+  min-height: 70px;
+  padding: 5px;
+  width: 100%;
+  background-color: var(--dark-blue);
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  z-index: 4;
+}
+/* styling the logo in the navigation bar */
+.logo-link {
+  float: left;
+  padding-left: 1rem;
+}
+.logo-image {
+  max-height: 70px;
+}
+
+.logo-image:hover {
+  background-color: var(--orange);
+  border-radius: 5px;
+}
+
+/* styling the links in the navigation bar */
+ul {
+  width: 100%;
+  padding: 0 0 0 3vw;
+  margin: auto;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+li {
+  font-family: var(--font-family);
+  padding: 0 1rem 0 1rem;
+  font-size: var(--nav-font-size);
+}
+li a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+li a:hover,
+li.active a:hover {
+  color: var(--orange);
+}
+
+li.active a {
+  background-color: var(--white);
+  color: var(--dark-blue);
+}
+
+/* styling the icon links in the nav bar */
+nav .icon {
+  float: right;
+  padding: 1rem 2rem 1rem 0;
+  margin: auto 0;
+}
+i {
+  font-size: var(--nav-font-size);
+  color: var(--white);
+}
+.icon i:hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+/* styling the hamburger menu */
+#hamburger-menu /* the checkbox */ {
+  display: none;
+}
+label[for="hamburger-menu"] /* the humburger icon */ {
+  margin: auto 0;
+  padding: 1rem 2rem 1rem 0;
+  float: right;
+  display: none;
+}
+label[for="hamburger-menu"] /* the humburger icon */ {
+  color: var(--white);
+}
+
+i.active {
+  color: var(--orange);
+}
+
+/* STYLING THE HEADER */
+header {
+  min-height: 50px;
+  width: 100%;
+  background-color: var(--dark-blue);
+  border-top: var(--gray) 1px solid;
+  border-bottom: var(--gray) 3px solid;
+  border-radius: 0 0 10px 10px;
+  position: relative;
+  top: 0px;
+  overflow: hidden;
+  margin-top: 84px;
+  z-index: 2;
+}
+
+.flashing {
+  /* display: inline-block; */
+  margin-top: 10px;
+  font-family: var(--font-family);
+  color: var(--white);
+  animation-name: flashing;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  opacity: 0.7;
+}
+@keyframes flashing {
+  0% {
+    color: var(--gray);
+  }
+  33% {
+    color: var(--light-blue);
+  }
+  66% {
+    color: var(--orange);
+  }
+  100% {
+    color: var(--gray);
+  }
+}
+
+h1.flashing {
+  font-size: var(--h1-font-size);
+}
+h2.flashing {
+  font-size: var(--h2-font-size);
+}
+
+.form {
+  text-align: center;
+}
+
+#search {
+  font-size: var(--nav-font-size);
+  font-family: var(--font-family);
+  border: var(--orange) 3px solid;
+  border-radius: 5px 0 0 5px;
+  margin-bottom: 10px;
+}
+
+button[type="submit"] {
+  background-color: var(--orange);
+  padding: 5px;
+  border: none;
+  border-radius: 0 6px 6px 0;
+}
+button[type="submit"]:hover {
+  cursor: pointer;
+}
+
+/* STYLING THE MAIN PAGE CONTENT */
+.page-content {
+  padding-bottom: 3vh;
+  z-index: 1;
+  border-radius: 0 0 50% 50%;
+}
+
+/* styling .flex */
+.flex-lg,
+.flex-sm {
+  display: flex;
+}
+
+/* styling aside.left */
+/* the content of this tag will be shown above .flex-sm on smaller screens */
+aside.left,
+aside.right {
+  flex: 1;
+  min-height: 500px;
+  padding: 5px 5px 4vh 5px;
+  background-color: var(--dark-blue);
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--start-of-main-content);
+}
+
+/* STYLING THE LEFT ASIDE ON LARGE SCREENS */
+aside.left {
+  flex: 1.1;
+}
+.filter-sort {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white);
+  border-radius: 5px;
+  margin: var(--aside-margin-top) 1vw 1vw 1vw;
+}
+.left * {
+  font-family: var(--font-family);
+}
+.left h2 {
+  font-size: var(--h2-font-size);
+  color: var(--dark-blue);
+  font-family: var(--font-family);
+  border-bottom: var(--dark-blue) 1px solid;
+  margin: 5px auto;
+  cursor: pointer;
+}
+.left h2 i {
+  color: var(--dark-blue);
+}
+.left h3 {
+  font-size: var(--h3-font-size);
+  color: var(--dark-blue);
+  font-family: var(--font-family);
+  border-bottom: var(--dark-blue) 1px solid;
+  float: left;
+  margin: 0;
+}
+.left form {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.criterion {
+  margin: 5px 0;
+}
+.criterion .title {
+  float: left;
+  font-size: var(--p-font-size);
+}
+.criterion .input {
+  float: right;
+}
+.input input {
+  max-width: 5vw;
+  height: var(--p-font-size);
+}
+.input input[type="checkbox"] {
+  width: var(--p-font-size);
+  height: var(--p-font-size);
+}
+
+/* styling the hide and show filter/sort areas */
+#filters-checkbox,
+#sort-checkbox {
+  display: none;
+}
+#filters-checkbox:checked ~ #filters-form,
+#sort-checkbox:checked ~ #sort-form {
+  display: none;
+}
+
+/* styling .flex-sm */
+.flex-sm {
+  flex: 4;
+}
+
+/* STYLING THE MAIN SECTION */
+main {
+  flex: 3;
+  min-height: 500px;
+  padding: 1vw 5px 9vh 5px;
+  background-color: var(--light-gray);
+  opacity: 0.9;
+}
+/* styling the animation on sections */
+section {
+  animation: show 1s forwards ease-in;
+  opacity: 0;
+}
+
+@keyframes show {
+  100% {
+    opacity: 1;
+  }
+}
+main * {
+  font-family: var(--font-family);
+  color: var(--dark-blue);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+.game-category {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 15px;
+  border-bottom: var(--dark-blue) 2px solid;
+}
+.product {
+  position: relative;
+  flex-basis: 150px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  margin: 1vw;
+  box-shadow: 0px 0px 3px 4px rgb(86, 65, 87);
+}
+.product img {
+  width: 100%;
+  height: 75%;
+}
+.product i {
+  font-size: var(--nav-font-size);
+  color: var(--white);
+  background-color: var(--dark-blue);
+  position: absolute;
+  z-index: 2;
+}
+.product i:hover {
+  cursor: pointer;
+  color: var(--green);
+}
+.product a {
+  text-decoration: none;
+}
+.add-to-favourites {
+  left: 0px;
+  top: var(--icon-position-from-the-top);
+}
+.add-to-cart {
+  right: 0px;
+  top: var(--icon-position-from-the-top);
+}
+.product a h3 {
+  margin: 0;
+  font-size: 0.2 * var(--p-font-size);
+  padding-bottom: 2px;
+}
+.product a p {
+  margin: 0;
+  padding: 2px;
+  font-size: var(--p-font-size);
+  background-color: var(--orange);
+  position: absolute;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+}
+
+/* STYLING THE RIGHT BAR */
+aside.right {
+  justify-content: flex-start;
+}
+aside.right a.icon {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  text-decoration: none;
+  margin-top: var(--aside-margin-top);
+}
+aside.right a.icon i {
+  font-size: var(--h1-font-size);
+}
+
+/* STYLING THE TO-TOP ICON */
+#to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 7.5px;
+  background-color: var(--orange);
+  padding: 10px 15px;
+  border-radius: 50%;
+  z-index: 6;
+}
+
+#to-top i {
+  font-size: 30px;
+}
+
+/* STYLING THE SIGN IN FORM */
+#sign-in {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#sign-in > .void {
+  flex: 1;
+}
+
+#sign-in form {
+  border: var(--green) 3px solid;
+  max-width: 50%;
+  padding: 0 2vw;
+  flex: 6;
+  position: relative;
+}
+label[for="remember-me"] {
+  font-size: 0.5 * var(--p-font-size);
+}
+#form-top img {
+  /* putting the logo on top of the form */
+  width: 100%;
+  height: 20%;
+}
+#sign-in form > div {
+  display: flex;
+  padding: 1vw;
+}
+
+.sign-options {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sign-options h3 {
+  font-size: 0.2 * var(--h3-font-size);
+  margin: 0 0 2vh 0;
+}
+
+.sign-options div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 0 2vh 0;
+}
+
+.sign-options div i:hover {
+  cursor: pointer;
+  color: var(--orange);
+}
+
+.or {
+  display: flex;
+  padding: 2px;
+}
+.or::after,
+.or::before {
+  content: "";
+  display: flex;
+  width: 50%;
+  height: 2px;
+  background-color: var(--dark-blue);
+  margin: auto 2px;
+}
+
+#sign-in input[type="text"],
+#sign-in input[type="password"] {
+  width: 100%;
+  border: var(--green) 1.5px solid;
+  font-size: 0.5 * var(--p-font-size);
+}
+
+/* STYLING THE SIGN IN FORM BUTTONS */
+#sign-in-button {
+  position: absolute;
+  left: -3px;
+  width: 55%;
+  border: var(--green) 3px solid;
+  border-radius: 0px;
+  background-color: var(--green);
+  color: var(--orange);
+  font-size: 0.5 * var(--p-font-size);
+}
+#sign-up-link {
+  position: absolute;
+  right: -3px;
+  width: 52%;
+  border: var(--dark-blue) 3px solid;
+  color: var(--white);
+  background-color: var(--dark-blue);
+  padding: 5px;
+  font-size: 0.5 * var(--p-font-size);
+}
+
+#sign-in form a input:hover {
+  cursor: pointer;
+}
+
+/* STYLING THE SIGN UP FORM BUTTONS */
+#sign-up-button {
+  position: absolute;
+  right: -3px;
+  width: 55%;
+  border: var(--green) 3px solid;
+  background-color: var(--green);
+  color: var(--orange);
+  border-radius: 0px;
+  padding: 5px;
+  font-size: 0.5 * var(--p-font-size);
+}
+#sign-in-link {
+  position: absolute;
+  left: -3px;
+  width: 52%;
+  border: var(--dark-blue) 3px solid;
+  color: var(--white);
+  background-color: var(--dark-blue);
+  padding: 5px;
+  font-size: 0.5 * var(--p-font-size);
+}
+
+/* STYLING THE FOOTER */
+footer {
+  margin-top: -3vw;
+}
+
+footer h1 {
+  padding: 1vw;
+  background-color: var(--light-blue);
+  border-radius: 50% 50% 0 0;
+  font-size: var(--h1-font-size);
+  color: var(--white);
+  font-family: var(--font-family);
+  font-weight: lighter;
+  margin: 0;
+  opacity: 0.999;
+}
+[data-text]::after {
+  content: attr(data-text);
+}
+
+/* styling for small screens */
+@media screen and (max-width: 475px) {
+  :root {
+    --icon-position-from-the-top: 65%;
+  }
+  .product a h3 {
+    font-size: 4vw;
+  }
+  .product i {
+    font-size: 10.4vw;
+  }
+  #sign-in form {
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  :root {
+    --nav-font-size: 4vw;
+    --h1-font-size: 5vw;
+    --h2-font-size: 4.5vw;
+    --h3-font-size: 4vw;
+    --p-font-size: 4vw;
+  }
+  /* styling the hamburger menu in the nav bar */
+  .navbar {
+    display: block;
+    overflow: visible;
+    z-index: 3;
+  }
+  label[for="hamburger-menu"] {
+    display: inline;
+  }
+  #nav-list {
+    display: none;
+  }
+  input[type="checkbox"]:checked ~ #nav-list {
+    display: flex;
+    flex-direction: column;
+  }
+  input[type="checkbox"]:checked ~ .hamburger-icon i {
+    color: var(--orange);
+  }
+
+  .icon i {
+    font-size: var(--nav-font-size);
+  }
+  .hamburger-icon {
+    position: fixed;
+    top: 12px;
+    right: 0px;
+  }
+
+  /* styling the icons in the nav bar on small screens */
+  .shopping-cart {
+    position: fixed;
+    top: 12px;
+    right: 50px;
+  }
+  .sign-up {
+    position: fixed;
+    top: 12px;
+    right: 100px;
+  }
+  .sign-in {
+    position: fixed;
+    top: 12px;
+    right: 150px;
+  }
+  #nav-list li {
+    text-align: center;
+    font-size: var(--nav-font-size);
+    padding-top: 5px;
+  }
+
+  /* styling the header on small screens */
+  header {
+    margin-top: 84px;
+  }
+
+  .flex-lg {
+    display: block;
+  }
+  aside.left {
+    min-height: 100px;
+  }
+  .filter-sort {
+    margin: 1vw 5vw;
+  }
+  .filter-sort h2 {
+    font-size: var(--h2-font-size);
+  }
+  .criterion {
+    padding: 5px 0px;
+  }
+  .criterion * {
+    font-size: var(--p-font-size);
+  }
+  .input input {
+    max-width: 20vw;
+  }
+  aside.left-sm {
+    flex: 1;
+    min-height: 500px;
+    background-color: var(--dark-blue);
+    opacity: 0.9;
+  }
+  main {
+    flex: 7;
+  }
+  aside.right {
+    flex: 1;
+  }
+  .product i {
+    font-size: 5.4vw;
+  }
+
+  #sign-in form {
+    max-width: 70%;
+  }
+}
+
+@media screen and (min-width: 640px) and (max-width: 785px) {
+  :root {
+    --icon-position-from-the-top: 65%;
+  }
+  .product a h3 {
+    font-size: 4vw;
+  }
+  .product i {
+    font-size: 4vw;
+  }
+  #sign-in form {
+    flex: 10;
+    max-width: 70%;
+  }
+}
+
+@media screen and (min-width: 786px) and (max-width: 930px) {
+  .product a h3 {
+    font-size: 2.5vw;
+  }
+  .product i {
+    font-size: 4.2vw;
+  }
+}
+
+@media screen and (min-width: 931px) and (max-width: 1100px) {
+  :root {
+    --icon-position-from-the-top: 65.5%;
+  }
+  .product {
+    flex-grow: initial;
+    min-height: 250px;
+  }
+  .product i {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1255px) {
+  .product {
+    flex-grow: initial;
+    min-height: 250px;
+  }
+  .product i {
+    font-size: 2.5vw;
+  }
+}
