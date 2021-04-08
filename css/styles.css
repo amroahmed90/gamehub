@@ -350,6 +350,8 @@ h2 {
   flex-shrink: 1;
   flex-grow: 1;
   margin: 1vw;
+  /* max-width: ;
+  max-height: ; */
   box-shadow: 0px 0px 3px 4px rgb(86, 65, 87);
 }
 .product img {
@@ -424,14 +426,14 @@ aside.right a.icon i {
   font-size: 30px;
 }
 
-/* STYLING THE SIGN IN FORM */
+/* STYLING THE SIGN IN/UP FORM */
 #sign-in {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-#sign-in > .void {
+.void {
   flex: 1;
 }
 
@@ -499,7 +501,7 @@ label[for="remember-me"] {
   font-size: 0.5 * var(--p-font-size);
 }
 
-/* STYLING THE SIGN IN FORM BUTTONS */
+/* STYLING THE SIGN IN/UP FORM BUTTONS */
 #sign-in-button {
   position: absolute;
   left: -3px;
@@ -548,6 +550,42 @@ label[for="remember-me"] {
   font-size: 0.5 * var(--p-font-size);
 }
 
+/* STYLING THE PRODUCTS PAGES */
+#section-product-details {
+  display: flex;
+  font-size: var(--p-font-size);
+}
+.product-details {
+  flex: 20;
+  border: var(--dark-blue) 3px solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.poster {
+  max-width: 35%;
+  float: left;
+  padding: 0 10px 10px 0;
+}
+
+.left-floated-details {
+  float: left;
+}
+
+.data {
+  color: var(--light-blue);
+}
+
+.ranked {
+  color: var(--orange);
+}
+
+.unfloated-details::before {
+  content: "";
+  display: block;
+  clear: left;
+}
+
 /* STYLING THE FOOTER */
 footer {
   margin-top: -3vw;
@@ -571,7 +609,10 @@ footer h1 {
 /* styling for small screens */
 @media screen and (max-width: 475px) {
   :root {
-    --icon-position-from-the-top: 65%;
+    --icon-position-from-the-top: 69.5%;
+  }
+  .product {
+    margin: 2vw;
   }
   .product a h3 {
     font-size: 4vw;
@@ -688,9 +729,13 @@ footer h1 {
   #sign-in form {
     max-width: 70%;
   }
+  .poster {
+    max-width: 100%;
+    padding-right: 0;
+  }
 }
 
-@media screen and (min-width: 640px) and (max-width: 785px) {
+@media screen and (min-width: 640px) and (max-width: 786px) {
   :root {
     --icon-position-from-the-top: 65%;
   }
@@ -725,6 +770,9 @@ footer h1 {
   }
   .product i {
     font-size: 2.5vw;
+  }
+  .product-details {
+    flex: 8;
   }
 }
 
