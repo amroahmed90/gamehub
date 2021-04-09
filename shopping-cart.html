@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Shopping cart with all items before checkout"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/Icons/icon.png"
+      type="image/x-icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/52bf6588fd.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Your Cart | GameHub</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <a class="logo-link" href="./index.html">
+          <img
+            class="logo-image"
+            src="./images/GameHub_Logo.png"
+            alt="GameHub Logo"
+          />
+        </a>
+
+        <input type="checkbox" name="hamburger-menu" id="hamburger-menu" />
+        <ul id="nav-list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./new-arrivals.html">New</a></li>
+          <li><a href="./pc.html">PC</a></li>
+          <li><a href="./playstation.html">PS</a></li>
+          <li><a href="./xbox.html">XBox</a></li>
+        </ul>
+        <a href="./sign-in.html" class="icon sign-in"
+          ><i class="fas fa-sign-in-alt" title="Sign In"></i
+        ></a>
+        <a href="./sign-up.html" class="icon sign-up"
+          ><i class="fas fa-user-plus" title="Sign Up"></i
+        ></a>
+        <a
+          href="./shopping-cart.html"
+          class="icon shopping-cart"
+          title="View Shopping Cart"
+        >
+          <i class="fas fa-shopping-cart active"></i>
+        </a>
+        <label for="hamburger-menu" class="icon hamburger-icon">
+          <i id="hamburger-icon" class="fas fa-bars"></i>
+        </label>
+      </nav>
+      <header>
+        <h1 class="center-text flashing">
+          Welcome to GameHub, the universe of games.
+        </h1>
+        <form action="./search.html" method="get" class="flext-sm form">
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Find your games here..."
+            autocomplete="off"
+          />
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </header>
+      <div class="flex-lg page-content">
+        <!-- this div is visible on the left on large scrrens,
+              and shown on the top on the small screens  -->
+        <aside
+          class="left"
+          aria-label="Left bar On the large screens, Top bar on large screens."
+        ></aside>
+        <div class="flex-sm">
+          <!-- this div is visible on the left on small screens, hidden on large screens -->
+          <aside class="left-sm" aria-label="Left bar on small screens"></aside>
+
+          <main>
+            <h2 class="center-text">Shopping Cart</h2>
+            <section id="section-cart">
+              <div class="void"></div>
+
+              <div class="cart-details">
+                <div class="cart-item">
+                  <a href="./products-html/product1.html">
+                    <img
+                      src="./images/New Arrivals/product1.jpg"
+                      alt="Product#1 Poster"
+                    />
+                  </a>
+
+                  <div class="cart-item-details">
+                    <h3 class="center-text">Counter Strike</h3>
+                    <div class="cart-item-details-middle">
+                      <p class="center-text">
+                        Price: <span class="data">$19.9</span>\item
+                      </p>
+                      <p class="center-text">
+                        <button class="minus">-</button>
+                        <span>1</span>
+                        <button class="plus">+</button>
+                      </p>
+                    </div>
+                    <p class="center-text total-price">$19.9</p>
+                  </div>
+                </div>
+
+                <div class="cart-item">
+                  <a href="./products-html/product2.html">
+                    <img
+                      src="./images/New Arrivals/product2.jpg"
+                      alt="Product#1 Poster"
+                    />
+                  </a>
+
+                  <div class="cart-item-details">
+                    <h3 class="center-text">FIFA21</h3>
+                    <div class="cart-item-details-middle">
+                      <p class="center-text">
+                        Price: <span class="data">$59.9</span>\item
+                      </p>
+                      <p class="center-text">
+                        <button class="minus">-</button>
+                        <span>1</span>
+                        <button class="plus">+</button>
+                      </p>
+                    </div>
+                    <p class="center-text total-price">Subtotal: $59.9</p>
+                  </div>
+                </div>
+
+                <h4 class="center-text">Grand Total: $89.8</h4>
+
+                <div class="buttons">
+                  <button class="btn-cart">
+                    <a href="./index.html">Continue Shopping</a>
+                  </button>
+                  <button class="btn-favourites">
+                    <a href="./shopping-successful.html">Checkout</a>
+                  </button>
+                </div>
+              </div>
+              <div class="void"></div>
+            </section>
+          </main>
+
+          <aside class="right" aria-label="Right Bar">
+            <a href="https://facebook.com" class="icon" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com" class="icon" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com" class="icon" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="mailto:support@gamehub.com" class="icon" target="_blank">
+              <i class="fas fa-at"></i>
+            </a>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <a id="to-top" href="#"><i class="fas fa-angle-up"></i></a>
+
+    <footer><h1 class="center-text" data-text="&#169; GameHub"></h1></footer>
+  </body>
+</html>

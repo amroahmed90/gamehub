@@ -7,10 +7,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Search results showing the requested game: cover, price, description, etc"
-    />
+    <meta name="description" content="Checkout has been successful." />
     <link rel="stylesheet" href="./css/styles.css" />
     <link
       rel="shortcut icon"
@@ -21,7 +18,7 @@
       src="https://kit.fontawesome.com/52bf6588fd.js"
       crossorigin="anonymous"
     ></script>
-    <title>Search Results | GameHub</title>
+    <title>Order Accepted | GameHub</title>
   </head>
   <body>
     <div class="container">
@@ -53,7 +50,7 @@
           class="icon shopping-cart"
           title="View Shopping Cart"
         >
-          <i class="fas fa-shopping-cart"></i>
+          <i class="fas fa-shopping-cart active"></i>
         </a>
         <label for="hamburger-menu" class="icon hamburger-icon">
           <i id="hamburger-icon" class="fas fa-bars"></i>
@@ -86,42 +83,21 @@
           <aside class="left-sm" aria-label="Left bar on small screens"></aside>
 
           <main>
-            <h2 class="center-text">Search Results</h2>
-            <section id="section-product-details">
+            <section id="section-cart">
               <div class="void"></div>
-              <div class="product-details">
-                <h3 class="center-text">PES2021</h3>
-                <img
-                  src="./images/New Arrivals/product4.jpg"
-                  alt="PES2021 poster"
-                  class="poster"
-                />
-                <div class="left-floated-details">
-                  <p>Price: <span class="data">$49.9</span></p>
-                  <p>Genre: <span class="data">Football, Soccer</span></p>
-                  <p>Release Date: <span class="data">12-Nov-1998</span></p>
-                  <p>Device: <span class="data">PC</span></p>
-                  <p>
-                    Rating:
-                    <span class="fas fa-star ranked"></span>
-                    <span class="fas fa-star ranked"></span>
-                    <span class="fas fa-star ranked"></span>
-                    <span class="fas fa-star"></span>
-                    <span class="fas fa-star"></span>
-                  </p>
-                </div>
-                <div class="unfloated-details">
-                  <p>Details:</p>
-                  <p class="data">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Impedit in a nemo inventore reiciendis recusandae quas!
-                    Fugit, architecto neque. Ullam, repellat voluptate commodi
-                    asperiores ducimus totam suscipit minima fugit explicabo.
-                  </p>
-                  <div class="buttons">
-                    <button class="btn-cart">Add to Cart</button>
-                    <button class="btn-favourites">Add to Favourites</button>
-                  </div>
+              <div class="cart-details">
+                <h2 class="center-text">Your order is successful!</h2>
+                <p class="center-text">
+                  Please go to your profile to see your orders' status.
+                </p>
+
+                <div class="buttons">
+                  <button class="btn-cart">
+                    <a href="./index.html">Home Page</a>
+                  </button>
+                  <button class="btn-favourites">
+                    <a href="./profile.html">Profile</a>
+                  </button>
                 </div>
               </div>
               <div class="void"></div>
