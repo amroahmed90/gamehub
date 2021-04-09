@@ -715,6 +715,84 @@ label[for="remember-me"] {
   text-decoration: none;
 }
 
+/* Styling the profile page */
+#section-profile {
+  display: flex;
+}
+.void-profile {
+  flex: 1;
+}
+.profile-details {
+  flex: 8;
+  border: var(--dark-blue) 3px solid;
+  padding: 1vw;
+}
+#profile-top img {
+  /* putting the logo on top of the form */
+  width: 100%;
+  height: 20%;
+}
+
+.profile-middle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profile-picture {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1vw;
+}
+.profile-picture img {
+  width: 80%;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.profile-info a {
+  text-decoration: none;
+  margin: 1vw 0;
+  padding: 0.5vw;
+  width: 100%;
+  border: var(--dark-blue) 2px solid;
+  border-radius: 5px;
+}
+
+.profile-bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.profile-bottom a {
+  flex: 1;
+  text-decoration: none;
+  border: var(--dark-blue) 2px solid;
+  border-radius: 5px;
+  background-color: var(--orange);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 1vw;
+  padding: 0.5vw;
+}
+
+.profile-info a:hover,
+.profile-bottom a:hover {
+  box-shadow: 0 0 10px 0 var(--dark-blue);
+}
+
 /* STYLING THE FOOTER */
 footer {
   margin-top: -3vw;
@@ -740,6 +818,9 @@ footer h1 {
   :root {
     --icon-position-from-the-top: 69.5%;
   }
+  /* aside.left {
+    display: none;
+  } */
   .product {
     margin: 2vw;
   }
@@ -764,6 +845,9 @@ footer h1 {
   .cart-item-details p,
   .cart-item-details-middle button {
     font-size: calc(0.8 * var(--p-font-size));
+  }
+  .profile-details {
+    flex: 20;
   }
 }
 
@@ -835,7 +919,7 @@ footer h1 {
     display: block;
   }
   aside.left {
-    min-height: 100px;
+    display: none;
   }
   .filter-sort {
     margin: 1vw 5vw;
@@ -881,6 +965,9 @@ footer h1 {
   .cart-item img {
     max-width: 23vw;
   }
+  .profile-details {
+    flex: 20;
+  }
 }
 
 @media screen and (min-width: 640px) and (max-width: 786px) {
@@ -897,6 +984,9 @@ footer h1 {
     flex: 10;
     max-width: 70%;
   }
+  .profile-details {
+    flex: 10;
+  }
 }
 
 @media screen and (min-width: 786px) and (max-width: 930px) {
@@ -905,6 +995,9 @@ footer h1 {
   }
   .product i {
     font-size: 4.2vw;
+  }
+  .profile-details {
+    flex: 10;
   }
 }
 
@@ -921,6 +1014,9 @@ footer h1 {
   }
   .product-details {
     flex: 8;
+  }
+  .profile-details {
+    flex: 10;
   }
 }
 
