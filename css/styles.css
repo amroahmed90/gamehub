@@ -769,6 +769,7 @@ label[for="remember-me"] {
 }
 
 .profile-bottom {
+  margin: 0 -1vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
