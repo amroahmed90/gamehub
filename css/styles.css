@@ -14,7 +14,7 @@
   --p-font-size: 1.8vw;
   --font-family: "Russo One";
   --start-of-main-content: 30px 0;
-  --icon-position-from-the-top: 65%;
+  --icon-position-from-the-top: 0;
   --aside-margin-top: 40px;
 }
 
@@ -228,7 +228,6 @@ button[type="submit"]:hover {
 aside.left,
 aside.right {
   flex: 1;
-  min-height: 500px;
   padding: 5px 5px 4vh 5px;
   background-color: var(--dark-blue);
   opacity: 0.9;
@@ -614,7 +613,8 @@ label[for="remember-me"] {
 }
 
 #section-cart h4 {
-  background-color: var(--orange);
+  background-color: var(--dark-blue);
+  color: var(--white);
   margin: 5vw 1vw 0 1vw;
   padding: 0.5vw;
 }
@@ -815,12 +815,6 @@ footer h1 {
 
 /* styling for small screens */
 @media screen and (max-width: 475px) {
-  :root {
-    --icon-position-from-the-top: 69.5%;
-  }
-  /* aside.left {
-    display: none;
-  } */
   .product {
     margin: 2vw;
   }
@@ -918,9 +912,9 @@ footer h1 {
   .flex-lg {
     display: block;
   }
-  aside.left {
+  /* aside.left {
     display: none;
-  }
+  } */
   .filter-sort {
     margin: 1vw 5vw;
   }
@@ -938,7 +932,7 @@ footer h1 {
   }
   aside.left-sm {
     flex: 1;
-    min-height: 500px;
+    /* min-height: 500px; */
     background-color: var(--dark-blue);
     opacity: 0.9;
   }
@@ -948,8 +942,10 @@ footer h1 {
   aside.right {
     flex: 1;
   }
-  .product i {
-    font-size: 5.4vw;
+
+  .add-to-favourites,
+  .add-to-cart {
+    font-size: var(--h1-font-size);
   }
 
   #sign-in form {
@@ -971,9 +967,6 @@ footer h1 {
 }
 
 @media screen and (min-width: 640px) and (max-width: 786px) {
-  :root {
-    --icon-position-from-the-top: 65%;
-  }
   .product a h3 {
     font-size: 4vw;
   }
@@ -1002,9 +995,6 @@ footer h1 {
 }
 
 @media screen and (min-width: 931px) and (max-width: 1100px) {
-  :root {
-    --icon-position-from-the-top: 65.5%;
-  }
   .product {
     flex-grow: initial;
     min-height: 250px;
