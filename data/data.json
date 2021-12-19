@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "name": "Counter Strike",
+    "img_src": "../images/products/Counter Strike.jpg",
+    "href":"./product.html",
+    "new_arrivals": false,
+    "price": 19.9,
+    "genre": ["Action", "Thriller"],
+    "release_date": "12-Nov-1998",
+    "devices": ["PS4", "XBOX", "PC"],
+    "rating": 4,
+    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit in a nemo inventore reiciendis recusandae quas! Fugit, architecto neque. Ullam, repellat voluptate commodi asperiores ducimus totam suscipit minima fugit explicabo."
+  },
+  {
+    "id": 2,
+    "name": "The Last Of Us II",
+    "img_src": "../images/products/The Last Of Us II.jpg",
+    "href":"./product.html",
+    "new_arrivals": true,
+    "price": 79.9,
+    "genre": ["Action", "Thriller"],
+    "release_date": "12-Nov-2020",
+    "devices": ["PS4", "XBOX"],
+    "rating": 5,
+    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit in a nemo inventore reiciendis recusandae quas! Fugit, architecto neque. Ullam, repellat voluptate commodi asperiores ducimus totam suscipit minima fugit explicabo."
+  }, 
+  {
+    "id": 3,
+    "name": "FIFA21",
+    "img_src": "../images/products/FIFA21.jpg",
+    "href":"./product.html",
+    "new_arrivals": false,
+    "price": 49.9,
+    "genre": ["Footbal", "Soccer"],
+    "release_date": "12-Oct-2020",
+    "devices": ["PS4", "XBOX", "PC"],
+    "rating": 5,
+    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit in a nemo inventore reiciendis recusandae quas! Fugit, architecto neque. Ullam, repellat voluptate commodi asperiores ducimus totam suscipit minima fugit explicabo."
+  }, 
+  {
+    "id": 4,
+    "name": "PES22",
+    "img_src": "../images/products/PES22.jpg",
+    "href":"./product.html",
+    "new_arrivals": true,
+    "price": 49.9,
+    "genre": ["Footbal", "Soccer"],
+    "release_date": "12-Oct-2021",
+    "devices": ["PS4", "XBOX"],
+    "rating": 4,
+    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit in a nemo inventore reiciendis recusandae quas! Fugit, architecto neque. Ullam, repellat voluptate commodi asperiores ducimus totam suscipit minima fugit explicabo."
+  }
+]
