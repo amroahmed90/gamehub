@@ -381,9 +381,9 @@ a.shopping-cart .number-of-cart-items {
   padding: 3px 8px;
   border-radius: 50%;
   position: absolute;
-  transform: scale(0.6);
   top: 0px;
   right: 15px;
+  display: none;
 }
 .product i:hover {
   cursor: pointer;
