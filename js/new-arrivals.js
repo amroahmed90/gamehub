@@ -21,6 +21,8 @@ function getData(){
     const products = JSON.parse(productsStr)
      // populate home page with products
      populateHomePage(products)
+     updateNumberOfCartItems()
+
   }
 }
 
@@ -52,7 +54,6 @@ function handleAddToCart(e) {
 // function to populate home page
 function populateHomePage(products) {
   let newReleasesDiv = document.querySelector("#new-releases .game-category")
-
   products.forEach(product => {
     const id = product.id
     const imgSrc = product.img_src
@@ -130,7 +131,7 @@ function checkInCart (seekedItem, cartItems) {
 
 // get the number of items in the cart
 function updateNumberOfCartItems () {
-  const cartItems = JSON.parse(sessionStorage.getItem(CART_KEY))
+  const cartItems = JSON.parse(sessionStorage.getItem(CART_KEY)) || []
   let numberOfCartItemsContainer = document.querySelector(".number-of-cart-items")
   numberOfCartItemsContainer.innerText = cartItems.length
   numberOfCartItemsContainer.style.display = cartItems.length ? "inline" : "none"
@@ -147,7 +148,7 @@ function updateSameProductInDifferentCategories(event) {
 
 // a function that takes in the id of an item and return true if it is in the shopping cart (session storage); otherwise it returns false
 function idIsInCart(id) {
-  const cartItems = JSON.parse(sessionStorage.getItem(CART_KEY))
+  const cartItems = JSON.parse(sessionStorage.getItem(CART_KEY)) || []
   let hasItem = false
   cartItems.forEach(item => {
     if (+item.id === +id) {
