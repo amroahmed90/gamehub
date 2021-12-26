@@ -178,7 +178,7 @@
                   />
                 </span>
               </div>
-              <button type="submit">Apply Filter</button>
+              <button type="button">Apply Filter</button>
             </form>
           </div>
 
@@ -191,84 +191,90 @@
               </h2>
             </label>
             <input type="checkbox" id="sort-checkbox" checked />
-            <form action="" method="post" id="sort-form">
+            <form id="sort-form">
               <h3>Price:</h3>
               <div class="criterion">
-                <span class="title">
-                  <label for="price-low-to-high">Low - High</label>
-                </span>
-                <span class="input">
-                  <input
-                    type="radio"
-                    name="price-sort"
-                    id="price-low-to-high"
-                    value="price-low-to-high"
-                  />
-                </span>
+                 <span class="title">
+                    <label for="price-low-to-high">Low - High</label>
+                 </span>
+                 <span class="input">
+                    <input
+                       type="radio"
+                       name="sort"
+                       id="price-low-to-high"
+                       value="price-low-to-high"
+                    />
+                 </span>
               </div>
               <div class="criterion">
-                <span class="title">
-                  <label for="price-high-to-low">High - Low</label>
-                </span>
-                <span class="input">
-                  <input
-                    type="radio"
-                    name="price-sort"
-                    id="price-high-to-low"
-                  />
-                </span>
+                 <span class="title">
+                    <label for="price-high-to-low">High - Low</label>
+                 </span>
+                 <span class="input">
+                    <input
+                       type="radio"
+                       name="sort"
+                       id="price-high-to-low"
+                       value="price-high-to-low"
+                    />
+                 </span>
               </div>
               <h3>Release Date:</h3>
               <div class="criterion">
-                <span class="title">
-                  <label for="date-old-to-new">Old - New</label>
-                </span>
-                <span class="input">
-                  <input
-                    type="radio"
-                    name="date-sort"
-                    id="date-old-to-new"
-                    value="date-old-to-new"
-                  />
-                </span>
+                 <span class="title">
+                    <label for="date-old-to-new">Old - New</label>
+                 </span>
+                 <span class="input">
+                    <input
+                       type="radio"
+                       name="sort"
+                       id="date-old-to-new"
+                       value="date-old-to-new"
+                    />
+                 </span>
               </div>
               <div class="criterion">
-                <span class="title">
-                  <label for="date-new-to-old">New - Old</label>
-                </span>
-                <span class="input">
-                  <input type="radio" name="date-sort" id="date-new-to-old" />
-                </span>
+                 <span class="title">
+                    <label for="date-new-to-old">New - Old</label>
+                 </span>
+                 <span class="input">
+                    <input
+                       type="radio"
+                       name="sort"
+                       id="date-new-to-old"
+                       value="date-new-to-old"
+                    />
+                 </span>
               </div>
               <h3>Alphabetical:</h3>
               <div class="criterion">
-                <span class="title">
-                  <label for="alpha-a-to-z">A - Z</label>
-                </span>
-                <span class="input">
-                  <input
-                    type="radio"
-                    name="alpha-sort"
-                    id="alpha-a-to-z"
-                    value="alpha-a-to-z"
-                  />
-                </span>
+                 <span class="title">
+                    <label for="alpha-a-to-z">A - Z</label>
+                 </span>
+                 <span class="input">
+                    <input
+                       type="radio"
+                       name="sort"
+                       id="alpha-a-to-z"
+                       value="alpha-a-to-z"
+                    />
+                 </span>
               </div>
               <div class="criterion">
-                <span class="title">
-                  <label for="alpha-z-to-a">Z - A</label>
-                </span>
-                <span class="input">
-                  <input
-                    type="radio"
-                    name="alpha-sort"
-                    id="alpha-z-to-a"
-                    value="alpha-z-to-a"
-                  />
-                </span>
+                 <span class="title">
+                    <label for="alpha-z-to-a">Z - A</label>
+                 </span>
+                 <span class="input">
+                    <input
+                       type="radio"
+                       name="sort"
+                       id="alpha-z-to-a"
+                       value="alpha-z-to-a"
+                    />
+                 </span>
               </div>
-              <button type="submit">Apply Sort</button>
-            </form>
+              <button type="button" onclick="applySort()">Apply Sort</button>
+           </form>
           </div>
         </aside>
         <div class="flex-sm">
@@ -276,6 +282,9 @@
           <aside class="left-sm" aria-label="Left bar on small screens"></aside>
 
           <main>
+            <section id="filter-sort-results">
+              <div class="game-category"></div>
+            </section>
             <section id="ps4">
               <h2 class="center-text">PlayStation Games</h2>
               <div class="game-category">
@@ -305,6 +314,7 @@
 
     <footer><h1 class="center-text" data-text="&#169; GameHub"></h1></footer>
 
+    <script src="./js/sort-filter.js"></script>
     <script src="./js/playstation.js"></script>
   </body>
 </html>

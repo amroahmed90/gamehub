@@ -108,7 +108,7 @@
                   </label>
                   <input type="checkbox" id="filters-checkbox" checked />
 
-                  <form action="" method="post" id="filters-form">
+                  <form id="filters-form">
                      <div class="criterion">
                         <span class="title">Price</span>
                         <span class="input">
@@ -179,7 +179,7 @@
                            />
                         </span>
                      </div>
-                     <button type="submit">Apply Filter</button>
+                     <button type="button">Apply Filter</button>
                   </form>
                </div>
 
@@ -191,8 +191,8 @@
                         <i class="fas fa-sort"></i>
                      </h2>
                   </label>
-                  <input type="checkbox" id="sort-checkbox" checked />
-                  <form action="" method="post" id="sort-form">
+                  <input type="checkbox" id="sort-checkbox"  />
+                  <form id="sort-form">
                      <h3>Price:</h3>
                      <div class="criterion">
                         <span class="title">
@@ -201,7 +201,7 @@
                         <span class="input">
                            <input
                               type="radio"
-                              name="price-sort"
+                              name="sort"
                               id="price-low-to-high"
                               value="price-low-to-high"
                            />
@@ -214,8 +214,9 @@
                         <span class="input">
                            <input
                               type="radio"
-                              name="price-sort"
+                              name="sort"
                               id="price-high-to-low"
+                              value="price-high-to-low"
                            />
                         </span>
                      </div>
@@ -227,7 +228,7 @@
                         <span class="input">
                            <input
                               type="radio"
-                              name="date-sort"
+                              name="sort"
                               id="date-old-to-new"
                               value="date-old-to-new"
                            />
@@ -240,8 +241,9 @@
                         <span class="input">
                            <input
                               type="radio"
-                              name="date-sort"
+                              name="sort"
                               id="date-new-to-old"
+                              value="date-new-to-old"
                            />
                         </span>
                      </div>
@@ -253,7 +255,7 @@
                         <span class="input">
                            <input
                               type="radio"
-                              name="alpha-sort"
+                              name="sort"
                               id="alpha-a-to-z"
                               value="alpha-a-to-z"
                            />
@@ -266,13 +268,13 @@
                         <span class="input">
                            <input
                               type="radio"
-                              name="alpha-sort"
+                              name="sort"
                               id="alpha-z-to-a"
                               value="alpha-z-to-a"
                            />
                         </span>
                      </div>
-                     <button type="submit">Apply Sort</button>
+                     <button type="button" onclick="applySort()">Apply Sort</button>
                   </form>
                </div>
             </aside>
@@ -284,6 +286,9 @@
                ></aside>
 
                <main>
+                  <section id="filter-sort-results">
+                     <div class="game-category"></div>
+                  </section>
                   <section id="new-releases">
                      <h2 class="center-text">New Releases</h2>
                      <div class="game-category">
@@ -336,5 +341,6 @@
       <footer><h1 class="center-text" data-text="&#169; GameHub"></h1></footer>
 
       <script src="./js/script.js"></script>
+      <script src="./js/sort-filter.js"></script>
    </body>
 </html>

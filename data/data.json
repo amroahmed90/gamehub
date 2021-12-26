@@ -8,6 +8,7 @@
     "price": 19.9,
     "genre": ["Action", "Thriller"],
     "release_date": "12-Nov-1998",
+    "release_date_formatted":"1998.11.12",
     "devices": ["PS4", "XBOX", "PC"],
     "rating": 4,
     "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit in a nemo inventore reiciendis recusandae quas! Fugit, architecto neque. Ullam, repellat voluptate commodi asperiores ducimus totam suscipit minima fugit explicabo."
@@ -21,6 +22,7 @@
     "price": 79.9,
     "genre": ["Action", "Thriller"],
     "release_date": "12-Nov-2020",
+    "release_date_formatted":"2020.11.12",
     "devices": ["PS4", "XBOX"],
     "rating": 5,
     "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit in a nemo inventore reiciendis recusandae quas! Fugit, architecto neque. Ullam, repellat voluptate commodi asperiores ducimus totam suscipit minima fugit explicabo."
@@ -34,6 +36,7 @@
     "price": 49.9,
     "genre": ["Footbal", "Soccer"],
     "release_date": "12-Oct-2020",
+    "release_date_formatted":"2020.10.12",
     "devices": ["PS4", "XBOX", "PC"],
     "rating": 5,
     "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit in a nemo inventore reiciendis recusandae quas! Fugit, architecto neque. Ullam, repellat voluptate commodi asperiores ducimus totam suscipit minima fugit explicabo."
@@ -47,6 +50,7 @@
     "price": 49.9,
     "genre": ["Footbal", "Soccer"],
     "release_date": "12-Oct-2021",
+    "release_date_formatted":"2021.10.12",
     "devices": ["PS4", "XBOX"],
     "rating": 4,
     "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit in a nemo inventore reiciendis recusandae quas! Fugit, architecto neque. Ullam, repellat voluptate commodi asperiores ducimus totam suscipit minima fugit explicabo."
