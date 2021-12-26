@@ -63,24 +63,9 @@ function populateHomePage(products) {
     const name = product.name
     const price = product.price
 
-    // building the new releases section
-    if (product.new_arrivals) {
-      newReleasesDiv.innerHTML += generateProductDiv(id, imgSrc, name, price)
-    }
-
-    // building the PC section
-    if (product.devices.includes("PC")) {
-      pcDiv.innerHTML += generateProductDiv(id, imgSrc, name, price)
-    }
-
     // building the PS4 section
     if (product.devices.includes("PS4")) {
       ps4Div.innerHTML += generateProductDiv(id, imgSrc, name, price)
-    }
-
-    // building the XBOX section
-    if (product.devices.includes("XBOX")) {
-      xboxDiv.innerHTML += generateProductDiv(id, imgSrc, name, price)
     }
   })
 }

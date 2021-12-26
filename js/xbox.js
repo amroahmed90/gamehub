@@ -51,10 +51,6 @@ function handleAddToCart(e) {
 /* HELPING FUNCTIONS */
 // function to populate home page
 function populateHomePage(products) {
-  let newReleasesDiv = document.querySelector("#new-releases .game-category")
-
-  let ps4Div = document.querySelector("#ps4 .game-category")
-  let pcDiv = document.querySelector("#pc .game-category")
   let xboxDiv = document.querySelector("#xbox .game-category")
 
   products.forEach(product => {
@@ -62,21 +58,6 @@ function populateHomePage(products) {
     const imgSrc = product.img_src
     const name = product.name
     const price = product.price
-
-    // building the new releases section
-    if (product.new_arrivals) {
-      newReleasesDiv.innerHTML += generateProductDiv(id, imgSrc, name, price)
-    }
-
-    // building the PC section
-    if (product.devices.includes("PC")) {
-      pcDiv.innerHTML += generateProductDiv(id, imgSrc, name, price)
-    }
-
-    // building the PS4 section
-    if (product.devices.includes("PS4")) {
-      ps4Div.innerHTML += generateProductDiv(id, imgSrc, name, price)
-    }
 
     // building the XBOX section
     if (product.devices.includes("XBOX")) {
